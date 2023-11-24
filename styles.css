@@ -1,0 +1,84 @@
+body {
+  background: rgb(33, 32, 43);
+}
+
+#menu-form{
+  background: rgb(33, 32, 43);
+  padding: 50px;
+}
+
+#hostname-label{
+  font-family: 'Comfortaa', sans-serif;
+  padding-right: 15px;
+  color: rgb(74, 126, 181);
+}
+#hostname {
+  border-radius: 10px;
+  padding-right: 15px;
+  border: 0px;
+  width: 200px;
+  height: 30px;
+  background: rgb(197, 169, 242);
+}
+#password-label{
+  font-family: 'Comfortaa', sans-serif;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: rgb(74, 126, 181);
+}
+#password {
+  background: rgb(197, 169, 242);
+  border-radius: 10px;
+  padding-right: 15px;
+  border: 0px;
+  width: 200px;
+  height: 30px;
+}
+#connect {
+  background: rgb(240, 181, 142);
+  border: 0px;
+  border-radius: 10px;
+  text-align: center;
+  width: 85px;
+  height: 25px;
+  font-family: 'Noto Sans', sans-serif;
+  margin-left: 15px;
+
+}
+#disconnect {
+  background: rgb(240, 181, 142);
+  border: 0px;
+  border-radius: 10px;
+  text-align: center;
+  width: 85px;
+  height: 25px;
+  font-family: 'Noto Sans', sans-serif;
+  margin-left: 15px;
+}
+#terminal {
+  background: rgb(33, 32, 43);
+  padding-top: 10px;
+  padding: 70px;
+}
+#test {
+  font-family: 'Comfortaa', sans-serif;
+  padding-right: 15px;
+  color: rgb(74, 126, 181);
+}
+#shell {
+  background: rgb(197, 169, 242);
+  border-radius: 10px;
+  border: 0px;
+  width: 75%;
+  height: 30px;
+  margin-top: 20px;
+}
+#enter {
+  background: rgb(240, 181, 142);
+  border: 0px;
+  border-radius: 10px;
+  text-align: center;
+  width: 85px;
+  height: 25px;
+  font-family: 'Noto Sans', sans-serif;
+}

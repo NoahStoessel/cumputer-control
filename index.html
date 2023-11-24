@@ -1,0 +1,32 @@
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Noto+Sans:ital@1&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+  <div id="window">
+  <div id="menu">
+      <div id="menu-form">
+        <label id="hostname-label">Enter your desired computers hostname:</label>
+        <input id="hostname">
+        <label id="password-label">Enter your computers password:</label>
+        <input id="password">
+        <button id="connect" onclick="request_connect()">Connect</button type="button">
+        <button id="disconnect" onclick="disconnect()">Disconnect</button>
+      </div>
+    </div>
+    <div id="terminal">
+      <!--<canvas id="terminal-screen"></canvas>-->
+        <label id="test">$</label>
+        <input id="shell">
+      <button id="enter" onclick="command()">Enter</button>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
