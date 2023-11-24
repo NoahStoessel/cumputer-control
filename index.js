@@ -3,15 +3,18 @@ const password = document.getElementById("password");
 const shell = document.getElementById("shell")
 const label = document.getElementById("test")
 let state = 0
+let og_location = window.location.origin
+let url_location = new URL(og_location)
+let url_page = url_location.hostname
 
 
 async function request_connect(){
   let user = hostname.value
   let pass = password.value
-  let url = 'http://127.0.0.1:5000/connect/?username=' + user + '&password=' + pass
+  let url = 'http://' + url_page + ':5000/connect/?username=' + user + '&password=' + pass
 
   fetch_api(url) 
-  url = 'http://127.0.0.1:5000/status/'
+  url = 'http://' + url_page + ':5000/status/'
   let response = await fetch_api(url)
   console.log(response)
   if(response == "Connected"){
@@ -37,7 +40,7 @@ async function fetch_api(url){
 }
 async function disconnect(){
 
-  let url = 'http://127.0.0.1:5000/disconnect/'
+  let url = 'http://' + url_page + ':5000/disconnect/'
   
   fetch_api(url, mode='no-cors')
 
@@ -45,7 +48,7 @@ async function disconnect(){
 }
 async function command(){
   console.log("sending command:", shell.value)
-  let url = 'http://127.0.0.1:5000/command/?command=' + shell.value
+  let url = 'http://' + url_page + ':5000/command/?command=' + shell.value
 
   let output = await fetch_api(url)
 

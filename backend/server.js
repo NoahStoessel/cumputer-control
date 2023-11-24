@@ -29,7 +29,7 @@ function run_command(command) {
     exec(command, (error, stdout, stderr) => {
       if(error){
         console.log("Failed to execute command")
-        reject(error)
+        resolve(stdout.trim())
       }
       else {
         resolve(stdout.trim())
@@ -49,6 +49,7 @@ app.get('/connect/', (req, res) => {
 
 app.get('/disconnect/', (req, res) => {
   console.log("Disconnecting from server!")
+  console.error("Server Disconnected")
 })
 
 app.get('/status/', (req, res) => {
