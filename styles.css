@@ -1,84 +1,98 @@
+/* Reset some default styles for consistency across browsers */
+body, h1, h2, h3, p, div, label, input, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background: rgb(33, 32, 43);
+  font-family: 'Comfortaa', cursive;
+  background-color: #2b2b2b; /* Dark background */
+  color: #ffffff; /* White text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-#menu-form{
-  background: rgb(33, 32, 43);
-  padding: 50px;
+#window {
+  display: flex;
+  width: 80%; /* Adjust as needed */
+  max-width: 800px; /* Adjust as needed */
 }
 
-#hostname-label{
-  font-family: 'Comfortaa', sans-serif;
-  padding-right: 15px;
-  color: rgb(74, 126, 181);
+#menu {
+  flex: 1;
+  padding: 20px;
+  background-color: #1e1e1e; /* Darker background for menu */
+  border-radius: 15px; /* Rounded corners */
+  margin-right: 20px; /* Spacing between menu and terminal */
 }
-#hostname {
-  border-radius: 10px;
-  padding-right: 15px;
-  border: 0px;
-  width: 200px;
-  height: 30px;
-  background: rgb(197, 169, 242);
-}
-#password-label{
-  font-family: 'Comfortaa', sans-serif;
-  padding-left: 15px;
-  padding-right: 15px;
-  color: rgb(74, 126, 181);
-}
-#password {
-  background: rgb(197, 169, 242);
-  border-radius: 10px;
-  padding-right: 15px;
-  border: 0px;
-  width: 200px;
-  height: 30px;
-}
-#connect {
-  background: rgb(240, 181, 142);
-  border: 0px;
-  border-radius: 10px;
-  text-align: center;
-  width: 85px;
-  height: 25px;
-  font-family: 'Noto Sans', sans-serif;
-  margin-left: 15px;
 
+#menu-form {
+  max-width: 300px;
+  margin: auto;
 }
-#disconnect {
-  background: rgb(240, 181, 142);
-  border: 0px;
-  border-radius: 10px;
-  text-align: center;
-  width: 85px;
-  height: 25px;
-  font-family: 'Noto Sans', sans-serif;
-  margin-left: 15px;
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #b7b7b7; /* Lighter grey for labels */
 }
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px; /* Increased spacing */
+  border: 1px solid #333333; /* Dark border */
+  border-radius: 8px; /* Slightly rounded corners */
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #6a00a8; /* Purple button background */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3f007d; /* Darker purple on hover */
+}
+
 #terminal {
-  background: rgb(33, 32, 43);
-  padding-top: 10px;
-  padding: 70px;
+  flex: 1;
+  padding: 20px;
 }
+
 #test {
-  font-family: 'Comfortaa', sans-serif;
-  padding-right: 15px;
-  color: rgb(74, 126, 181);
+  margin-right: 5px;
 }
+
 #shell {
-  background: rgb(197, 169, 242);
-  border-radius: 10px;
-  border: 0px;
-  width: 75%;
-  height: 30px;
-  margin-top: 20px;
+  width: calc(100% - 30px); /* Adjusted width */
+  padding: 12px;
+  margin-bottom: 15px; /* Increased spacing */
+  border: 1px solid #333333; /* Dark border */
+  border-radius: 8px; /* Slightly rounded corners */
 }
+
 #enter {
-  background: rgb(240, 181, 142);
-  border: 0px;
-  border-radius: 10px;
-  text-align: center;
-  width: 85px;
-  height: 25px;
-  font-family: 'Noto Sans', sans-serif;
+  width: 100%;
+  padding: 12px;
+  background-color: #000000; /* Black button background */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+#enter:hover {
+  background-color: #1a1a1a; /* Darker black on hover */
+}
+
