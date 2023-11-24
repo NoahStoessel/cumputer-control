@@ -4,7 +4,7 @@ const cors = require("cors")
 const { exec } = require('child_process');
 const username_set = "spectrum"
 const password_set = "paradox"
-
+let state = 0
 const corsOptions = {
   origin: "*",
 };
@@ -48,6 +48,7 @@ app.get('/connect/', (req, res) => {
 })
 
 app.get('/disconnect/', (req, res) => {
+  state = 0
   console.log("Disconnecting from server!")
   console.error("Server Disconnected")
 })
@@ -55,6 +56,7 @@ app.get('/disconnect/', (req, res) => {
 app.get('/status/', (req, res) => {
   console.log("Checking status...")
   if(user_exists && password_exists){
+    state = 1
     console.log("Logged in succesfully as:", username_set)
     res.send("Connected")
   }
@@ -65,7 +67,7 @@ app.get('/status/', (req, res) => {
 
 app.get('/command/', async (req, res) => {
   console.log("Attempting to run command:", req.query.command)
-  if (user_exists && password_exists){
+  if (state == 1){
   console.log("Running: ", req.query.command)
   let output = await run_command(req.query.command)
   console.log(output)
@@ -73,6 +75,7 @@ app.get('/command/', async (req, res) => {
   }
   else {
     console.log("Not Connected!")
+    res.send("NOT CONNECTED!")
   }
 })
 
